@@ -11,10 +11,10 @@
 <table class="center">
 <tr>
   <td>
-    <video src="https://github.com/user-attachments/assets/e6a27e51-3b02-4704-9d7f-2ed927afabcf" width="768px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/ef21d87c-34b8-4cad-86b7-f23fc57e8ddb" width="768px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video src="https://github.com/user-attachments/assets/cabdb192-bb17-4230-85c5-42a28dcc47af" width="768px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/54748782-cf2d-415c-824c-f2aa97754ab6" width="768px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 <tr>
@@ -23,10 +23,10 @@
 </tr>
 <tr>
   <td>
-    <video src="https://github.com/user-attachments/assets/0b577d76-7bcf-400d-81aa-ccb24d35d4c6" width="768px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/10d955dc-f00a-45c0-8632-2b2a93086281" width="768px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video src="https://github.com/user-attachments/assets/1fafdbc8-5ec7-4562-b278-68ad0182c66e" width="768px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/22ab1e13-222e-4f87-bf9e-2fca53fcb76d" width="768px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 <tr>
@@ -126,18 +126,18 @@ We first refocus on the role of text for this task and find that fine-grained te
 <table class="center">
 <tr>
   <td>
-    <video src="https://github.com/user-attachments/assets/bd3d4c91-5559-43da-bd22-ce496fd37342" width="800px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/4bc68bb0-1e5e-451f-ba74-706869267e51" width="800px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video src="https://github.com/user-attachments/assets/b87a680c-f87d-4f2d-aec1-aa7a5cc82abf" width="800px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/e524ba8f-d5a4-4713-9de6-f21c12521e39" width="800px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 <tr>
   <td>
-    <video src="https://github.com/user-attachments/assets/f0f89276-36ca-4aa5-bb69-28c38a7d79e8" width="800px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/2683efab-4da4-458c-a61c-d3112f6f5624" width="800px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video src="https://github.com/user-attachments/assets/79b56776-9376-4e0f-af7f-a922c9957b45" width="800px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/67889c3b-998d-460a-87b4-762a107629f5" width="800px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 </table>
