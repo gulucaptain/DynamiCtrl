@@ -69,13 +69,13 @@ We first refocus on the role of text for this task and find that fine-grained te
 <table class="center">
 <tr>
   <td>
-    <img src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image1.jpg" width="192px" height="100%">
+    <img src="https://github.com/user-attachments/assets/0e603117-35af-4543-9b5b-fa86b4b44ca9" width="192px" height="100%">
   </td>
   <td>
     <video src="https://github.com/user-attachments/assets/d43a890f-62b8-4d0a-9110-da2c80067c88" width="192px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <img width="192px" height="100%" src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image2.jpg">
+    <img width="192px" height="100%" src="https://github.com/user-attachments/assets/1bb7bbfd-fb2d-4c16-913f-ed8204a40858">
   </td>
   <td>
     <video src="https://github.com/user-attachments/assets/6c586a42-51bd-4641-84f8-bb02e6883ec3" width="768px" height="100%" controls autoplay loop></video>
@@ -89,7 +89,7 @@ We first refocus on the role of text for this task and find that fine-grained te
 </tr>
 <tr>
   <td></td>
-  <td><img src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image3.jpg"  width="192px" height="100%"></td>
+  <td><img src="https://github.com/user-attachments/assets/437e59f0-5f93-478e-a616-0d6d19664daa"  width="192px" height="100%"></td>
   <td>
     <video src="https://github.com/user-attachments/assets/356916f1-ff7f-466c-85b3-884fbc562893" width="768px" height="100%" controls autoplay loop></video>
   </td>
