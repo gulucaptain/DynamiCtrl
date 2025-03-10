@@ -11,13 +11,11 @@
 <table class="center">
 <tr>
   <td>
-    <video width="768px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video1.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/gulucaptain/DynamiCtrl/blob/main/assets/videos/video1.mp4" width="768px" height="100%" controls autoplay loop></video>
   </td>
   <td>
     <video width="768px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video2.mp4" type="video/mp4">
+    <source src="https://github.com/gulucaptain/DynamiCtrl/blob/main/assets/videos/video2.mp4" type="video/mp4">
     </video>
   </td>
 </tr>
@@ -80,9 +78,7 @@ We first refocus on the role of text for this task and find that fine-grained te
     <img src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image1.jpg" width="192px" height="100%">
   </td>
   <td>
-    <video width="192px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video1.mp4" type="video/mp4">
-    </video>
+    <video src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video1.mp4" width="192px" height="100%" controls autoplay loop></video>
   </td>
   <td>
     <img width="192px" height="100%" src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image2.jpg">
