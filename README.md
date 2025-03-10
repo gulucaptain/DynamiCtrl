@@ -11,33 +11,27 @@
 <table class="center">
 <tr>
   <td>
-    <video src="https://github.com/gulucaptain/DynamiCtrl/blob/main/assets/videos/video1.mp4" width="768px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/e6a27e51-3b02-4704-9d7f-2ed927afabcf" width="768px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video width="768px" height="100%" controls>
-    <source src="https://github.com/gulucaptain/DynamiCtrl/blob/main/assets/videos/video2.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/cabdb192-bb17-4230-85c5-42a28dcc47af" width="768px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 <tr>
-<td><p style="font-size:12px; text-align:justify;">Prompt: “The person in the image is wearing a traditional outfit with intricate embroidery and embellishments. The outfit features a blue and gold color scheme with detailed floral patterns. The background is dark and blurred, which helps to highlight the person and their attire. The lighting is soft and warm, creating a serene and elegant atmosphere.”</p></td>
-<td><p style="font-size:12px; text-align:justify;">Prompt: “The person in the image is a woman with long, blonde hair styled in loose waves. She is wearing a form-fitting, sleeveless top with a high neckline and a small cutout at the chest. The top is beige and has a strap across her chest. She is also wearing a black belt with a pouch attached to it. Around her neck, she has a turquoise pendant necklace. The background appears to be a dimly lit, urban environment with a warm, golden glow."</p></td>
+<td><p style="font-size:10px; text-align:justify;">Prompt: “The person in the image is wearing a traditional outfit with intricate embroidery and embellishments. The outfit features a blue and gold color scheme with detailed floral patterns. The background is dark and blurred, which helps to highlight the person and their attire. The lighting is soft and warm, creating a serene and elegant atmosphere.”</p></td>
+<td><p style="font-size:10px; text-align:justify;">Prompt: “The person in the image is a woman with long, blonde hair styled in loose waves. She is wearing a form-fitting, sleeveless top with a high neckline and a small cutout at the chest. The top is beige and has a strap across her chest. She is also wearing a black belt with a pouch attached to it. Around her neck, she has a turquoise pendant necklace. The background appears to be a dimly lit, urban environment with a warm, golden glow."</p></td>
 </tr>
 <tr>
   <td>
-    <video width="768px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video3.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/0b577d76-7bcf-400d-81aa-ccb24d35d4c6" width="768px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video width="768px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video4.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/1fafdbc8-5ec7-4562-b278-68ad0182c66e" width="768px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 <tr>
-<td><p style="font-size:12px; text-align:justify;">Prompt: “The person in the image is wearing a black, form-fitting one-piece outfit and a pair of VR goggles. They are walking down a busy street with numerous people and colorful neon signs in the background. The street appears to be a bustling urban area, possibly in a city known for its vibrant nightlife and entertainment. The lighting and signage suggest a lively atmosphere, typical of a cityscape at night."</p></td>
-<td><p style="font-size:12px; text-align:justify;">Prompt: “The image depicts a stylized, animated character standing amidst a chaotic and dynamic background. The character is dressed in a blue suit with a red cape, featuring a prominent "S" emblem on the chest. The suit has a belt with pouches and a utility belt. The character has spiky hair and is standing on a pile of debris and rubble, suggesting a scene of destruction or battle. The background is filled with glowing, fiery elements and a sense of motion, adding to the dramatic and intense atmosphere of the scene."</p></td>
+<td><p style="font-size:10px; text-align:justify;">Prompt: “The person in the image is wearing a black, form-fitting one-piece outfit and a pair of VR goggles. They are walking down a busy street with numerous people and colorful neon signs in the background. The street appears to be a bustling urban area, possibly in a city known for its vibrant nightlife and entertainment. The lighting and signage suggest a lively atmosphere, typical of a cityscape at night."</p></td>
+<td><p style="font-size:10px; text-align:justify;">Prompt: “The image depicts a stylized, animated character standing amidst a chaotic and dynamic background. The character is dressed in a blue suit with a red cape, featuring a prominent "S" emblem on the chest. The suit has a belt with pouches and a utility belt. The character has spiky hair and is standing on a pile of debris and rubble, suggesting a scene of destruction or battle. The background is filled with glowing, fiery elements and a sense of motion, adding to the dramatic and intense atmosphere of the scene."</p></td>
 </tr>
 </table>
 
@@ -78,15 +72,13 @@ We first refocus on the role of text for this task and find that fine-grained te
     <img src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image1.jpg" width="192px" height="100%">
   </td>
   <td>
-    <video src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video1.mp4" width="192px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/d43a890f-62b8-4d0a-9110-da2c80067c88" width="192px" height="100%" controls autoplay loop></video>
   </td>
   <td>
     <img width="192px" height="100%" src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image2.jpg">
   </td>
   <td>
-    <video width="192px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video2.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/6c586a42-51bd-4641-84f8-bb02e6883ec3" width="768px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 <tr>
@@ -99,9 +91,7 @@ We first refocus on the role of text for this task and find that fine-grained te
   <td></td>
   <td><img src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image3.jpg"  width="192px" height="100%"></td>
   <td>
-    <video width="192px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video5.mov" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/356916f1-ff7f-466c-85b3-884fbc562893" width="768px" height="100%" controls autoplay loop></video>
   </td>
   <td></td>
 </tr>
@@ -136,26 +126,18 @@ We first refocus on the role of text for this task and find that fine-grained te
 <table class="center">
 <tr>
   <td>
-    <video width="800px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video1.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/bd3d4c91-5559-43da-bd22-ce496fd37342" width="800px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video width="800px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video2.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/b87a680c-f87d-4f2d-aec1-aa7a5cc82abf" width="800px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 <tr>
   <td>
-    <video width="800px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video3.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/f0f89276-36ca-4aa5-bb69-28c38a7d79e8" width="800px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video width="800px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video4.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/79b56776-9376-4e0f-af7f-a922c9957b45" width="800px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 </table>
@@ -168,14 +150,10 @@ Show cases: long video with 12 seconds, driving by the same audio.
 <table class="center">
 <tr>
   <td>
-    <video width="512px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/digital_human/person1_output.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/4475fc8d-1736-4ee1-a0a5-e16b475b5eb3" width="512px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video width="512px" height="100%" controls>
-    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/digital_human/person2_output.mp4" type="video/mp4">
-    </video>
+    <video src="https://github.com/user-attachments/assets/9104ffd5-3480-4ab1-9ed2-b78661132147" width="512px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 </table>
