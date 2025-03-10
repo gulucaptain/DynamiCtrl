@@ -12,12 +12,12 @@
 <tr>
   <td>
     <video width="768px" height="100%" controls>
-    <source src="assets/videos/video1.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video1.mp4" type="video/mp4">
     </video>
   </td>
   <td>
     <video width="768px" height="100%" controls>
-    <source src="assets/videos/video2.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video2.mp4" type="video/mp4">
     </video>
   </td>
 </tr>
@@ -28,12 +28,12 @@
 <tr>
   <td>
     <video width="768px" height="100%" controls>
-    <source src="assets/videos/video3.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video3.mp4" type="video/mp4">
     </video>
   </td>
   <td>
     <video width="768px" height="100%" controls>
-    <source src="assets/videos/video4.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/video4.mp4" type="video/mp4">
     </video>
   </td>
 </tr>
@@ -77,19 +77,19 @@ We first refocus on the role of text for this task and find that fine-grained te
 <table class="center">
 <tr>
   <td>
-    <img src="assets/videos/background_control/bg_image1.jpg" width="192px" height="100%">
+    <img src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image1.jpg" width="192px" height="100%">
   </td>
   <td>
     <video width="192px" height="100%" controls>
-    <source src="assets/videos/background_control/bg_video1.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video1.mp4" type="video/mp4">
     </video>
   </td>
   <td>
-    <img width="192px" height="100%" src="assets/videos/background_control/bg_image2.jpg">
+    <img width="192px" height="100%" src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image2.jpg">
   </td>
   <td>
     <video width="192px" height="100%" controls>
-    <source src="assets/videos/background_control/bg_video2.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video2.mp4" type="video/mp4">
     </video>
   </td>
 </tr>
@@ -101,10 +101,10 @@ We first refocus on the role of text for this task and find that fine-grained te
 </tr>
 <tr>
   <td></td>
-  <td><img src="assets/videos/background_control/bg_image3.jpg"  width="192px" height="100%"></td>
+  <td><img src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_image3.jpg"  width="192px" height="100%"></td>
   <td>
     <video width="192px" height="100%" controls>
-    <source src="assets/videos/background_control/bg_video5.mov" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/background_control/bg_video5.mov" type="video/mp4">
     </video>
   </td>
   <td></td>
@@ -141,24 +141,24 @@ We first refocus on the role of text for this task and find that fine-grained te
 <tr>
   <td>
     <video width="800px" height="100%" controls>
-    <source src="assets/videos/re_video1.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video1.mp4" type="video/mp4">
     </video>
   </td>
   <td>
     <video width="800px" height="100%" controls>
-    <source src="assets/videos/re_video2.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video2.mp4" type="video/mp4">
     </video>
   </td>
 </tr>
 <tr>
   <td>
     <video width="800px" height="100%" controls>
-    <source src="assets/videos/re_video3.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video3.mp4" type="video/mp4">
     </video>
   </td>
   <td>
     <video width="800px" height="100%" controls>
-    <source src="assets/videos/re_video4.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/re_video4.mp4" type="video/mp4">
     </video>
   </td>
 </tr>
@@ -173,12 +173,12 @@ Show cases: long video with 12 seconds, driving by the same audio.
 <tr>
   <td>
     <video width="512px" height="100%" controls>
-    <source src="assets/videos/digital_human/person1_output.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/digital_human/person1_output.mp4" type="video/mp4">
     </video>
   </td>
   <td>
     <video width="512px" height="100%" controls>
-    <source src="assets/videos/digital_human/person2_output.mp4" type="video/mp4">
+    <source src="https://raw.githubusercontent.com/gulucaptain/DynamiCtrl/main/assets/videos/digital_human/person2_output.mp4" type="video/mp4">
     </video>
   </td>
 </tr>
