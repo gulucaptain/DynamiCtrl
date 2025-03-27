@@ -2,17 +2,17 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="MagDiff is an end-to-end framework designed for identity-consistent video generation, demonstrating the capability to conduct direct inference when giving new entities without additional training. Moreover, through the control of quantities per image, it can enable image-to-video generation and video editing tasks.">
-  <meta property="og:title" content="MagDiff: Multi-Alignment Diffusion for High-Fidelity Video Generation and Editing"/>
-  <meta property="og:description" content="MagDiff is an end-to-end framework designed for identity-consistent video generation, demonstrating the capability to conduct direct inference when giving new entities without additional training. Moreover, through the control of quantities per image, it can enable image-to-video generation and video editing tasks."/>
+  <meta name="description" content="DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation">
+  <meta property="og:title" content="DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation"/>
+  <meta property="og:description" content="DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation"/>
   <meta property="og:url" content="#/"/>
   <meta property="og:image" content="static/image/magdiff_overview.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="MagDiff: Multi-Alignment Diffusion for High-Fidelity Video Generation and Editing">
-  <meta name="twitter:description" content="MagDiff is an end-to-end framework designed for identity-consistent video generation, demonstrating the capability to conduct direct inference when giving new entities without additional training. Moreover, through the control of quantities per image, it can enable image-to-video generation and video editing tasks.">
+  <meta name="twitter:title" content="DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation">
+  <meta name="twitter:description" content="DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation">
   <meta name="twitter:image" content="static/images/magdiff_overview.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="Video diffusion models, video editing, MagDiff, imagen-video">
@@ -20,7 +20,7 @@
   <meta name="google-site-verification" content="T_oFVFZUHiJACY9w641hFTTl5VlAQy8zkWTmyq1L3Z4" />
 
 
-  <title>MagDiff: Multi-Alignment Diffusion for High-Fidelity Video Generation and Editing</title>
+  <title>DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation</title>
   <link rel="icon" type="image/x-icon" href="static/images/magdiff.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -48,11 +48,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MagDiff: Multi-Alignment Diffusion for High-Fidelity Video Generation and Editing</h1>
+            <h1 class="title is-1 publication-title">DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                Haoyu Zhao, Tianyi Lu, Jiaxi Gu, Xing Zhang, Qingping Zheng, Zuxuan Wu, Hang Xu, and Yu-Gang Jiang
+                Haoyu Zhao, Zhongang Qi, Cong Wang, Qingping Zheng, Guansong Lu, Fei Chen, Hang Xu, Zuxuan Wu
               </span>
             </div>
             
@@ -64,7 +64,7 @@
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2311.17338.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -74,7 +74,7 @@
 
             <!-- Github link -->
             <span class="link-block">
-                <a href="https://github.com/gulucaptain/MagDiff" target="_blank"
+                <a href="https://github.com/gulucaptain/DynamiCtrl" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fab fa-github"></i>
@@ -143,45 +143,6 @@
   </div>
 </section>
 <!-- End paper abstract -->
-
-
-<!-- Vid2vid carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3">Generation with Input Entities</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="vid2vid_video1" playsinline autoplay muted loop height="90%" src="static/videos/panda_plays_water.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="vid2vid_video2" playsinline autoplay muted loop height="90%" src="static/videos/teddy_bear_riding.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="vid2vid_video3" playsinline autoplay muted loop height="90%" src="static/videos/squirrel_eating.mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="vid2vid_video4" playsinline autoplay muted loop height="90%" src="static/videos/dog_jumped_river.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video5">
-          <video poster="" id="vid2vid_video5" playsinline autoplay muted loop height="90%" src="static/videos/panda_eats_bamboo.mp4">
-          </video>
-        </div>
-
-        <div class="item item-video6">
-          <video poster="" id="vid2vid_video6" playsinline autoplay muted loop height="90%" src="static/videos/Spiderman_turns_head.mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End vid2vid carousel -->
 
 
 <!-- Img2vid carousel -->
@@ -282,7 +243,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{zhao2024magdiff,
-  title={MagDiff: Multi-Alignment Diffusion for High-Fidelity Video Generation and Editing},
+  title={DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation},
   author={Zhao, Haoyu and Lu, Tianyi and Gu, Jiaxi and Zhang, Xing and Zheng, Qingping and Wu, Zuxuan and Xu, Hang and Jiang Yu-Gang},
   journal={ECCV},
   year={2024}
