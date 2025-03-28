@@ -64,7 +64,7 @@
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="http://arxiv.org/abs/2503.21246" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -95,40 +95,6 @@
 
 
 
-
-
-<!-- Subject Driven Video Generation carousel -->
-<section class="hero teaser">
-      <div class="hero-body ">
-    <div class="container is-max-desktop">
-  
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video2">
-          <video poster="" id="header-video2" autoplay muted loop playsinline height="100%" src="static/videos/volcano_is_erupting.mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-            When presented with object's subject, MagDiff can generate videos preserving entity content with high fidelity. In the given example, an image of a mountain prompts the generation of a video showing the mountain transitioning into a volcanic eruption.
-          </h2>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="header-video3" autoplay muted loop playsinline height="100%"  src="static/videos/Robot_playing_piano.mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-            MagDiff can edit the video based on video and text inputs. In this case, MagDiff successfully modified the robot's actions to playing the piano, and also edited the content and background accordingly.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Subject Driven Video Generation carousel -->
-
-
-
-
-
-
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -136,7 +102,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>The diffusion model is widely leveraged for either video generation or video editing. As each field has its task-specific problems, it is difficult to merely develop a single diffusion for completing both tasks simultaneously. Video diffusion sorely relying on the text prompt can be adapted to unify the two tasks. However, it lacks a high capability of aligning heterogeneous modalities between text and image, leading to various misalignment problems. In this work, we are the first to propose a unified Multi-alignment Diffusion, dubbed as MagDiff, for both tasks of high-fidelity video generation and editing. The proposed MagDiff introduces three types of alignments, including subject-driven alignment, adaptive prompts alignment, and high-fidelity alignment. Particularly, the subject-driven alignment is put forward to trade off the image and text prompts, serving as a unified foundation generative model for both tasks. The adaptive prompts alignment is introduced to emphasize different strengths of homogeneous and heterogeneous alignments by assigning different values of weights to the image and the text prompts. The high-fidelity alignment is developed to further enhance the fidelity of both video generation and editing by taking the subject image as an additional model input. Experimental results on four benchmarks suggest that our method outperforms the previous method on each task.</p>
+          <p>Human image animation has recently gained significant attention due to advancements in generative models. However, existing methods still face two major challenges: (1) architectural limitations—most models rely on U-Net, which underperforms compared to the MM-DiT; and (2) the neglect of textual information, which can enhance controllability. In this work, we introduce DynamiCtrl, a novel framework that not only explores different pose-guided control structures in MM-DiT, but also reemphasizes the crucial role of text in this task. Specifically, we employ a Shared VAE encoder for both reference images and driving pose videos, eliminating the need for an additional pose encoder and simplifying the overall framework. To incorporate pose features into the full attention blocks, we propose Pose-adaptive Layer Norm (PadaLN), which utilizes adaptive layer normalization to encode sparse pose features. The encoded features are directly added to the visual input, preserving the spatiotemporal consistency of the backbone while effectively introducing pose control into MM-DiT. Furthermore, within the full attention mechanism, we align textual and visual features to enhance controllability. By leveraging text, we not only enable fine-grained control over the generated content, but also, for the first time, achieve simultaneous control over both background and motion. Experimental results verify the superiority of DynamiCtrl on benchmark datasets, demonstrating its strong identity preservation, heterogeneous character driving, background controllability, and high-quality synthesis.</p>
         </div>
       </div>
     </div>
@@ -145,76 +111,24 @@
 <!-- End paper abstract -->
 
 
-<!-- Img2vid carousel -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <h2 class="title is-3">Generation with Input Object's Entity</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="img2vid_video1" playsinline autoplay muted loop height="90%" src="static/videos/shoe_standing.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="img2vid_video2" playsinline autoplay muted loop height="90%" src="static/videos/car_driving.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="img2vid_video3" playsinline autoplay muted loop height="90%" src="static/videos/Doraemon_walking.mp4">
-          </video>
-        </div>
 
-        <div class="item item-video4">
-          <video poster="" id="img2vid_video4" playsinline autoplay muted loop height="90%" src="static/videos/man_holding_umbrella.mp4">
-          </video>
-        </div>
-
-      <div class="item item-video5">
-          <video poster="" id="img2vid_video5" playsinline autoplay muted loop height="90%" src="static/videos/sailboat_sailing.mp4">
-          </video>
-        </div>
-      <div class="item item-video6">
-          <video poster="" id="img2vid_video6" playsinline autoplay muted loop height="90%" src="static/videos/woman_stands.mp4">
-          </video>
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Cases</h2>
+          <center>
+          <img src="static/images/demo.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End img2vid carousel -->
-
-
-<!-- Subject Driven Video Generation carousel -->
-<section class="hero is-small">
-  <div class="hero-body ">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">Editing with Input Video</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="sd_video1" playsinline autoplay muted loop height="90%" src="static/videos/unicorn_sprints.mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="sd_video2" playsinline autoplay muted loop height="90%" src="static/videos/eagle_lands.mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="sd_video3" playsinline autoplay muted loop height="90%" src="static/videos/skeleton_burning.mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="sd_video4" playsinline autoplay muted loop height="90%" src="static/videos/phoenix_files.mp4">
-          </video>
-        </div>
-        <div class="item item-video5">
-          <video poster="" id="sd_video5" playsinline autoplay muted loop height="90%" src="static/videos/ghost_floating.mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Subject Driven Video Generation carousel -->
 
 
 
@@ -225,10 +139,10 @@
         <div class="content">
           <h2 class="title is-3">Method Overview:</h2>
           <center>
-          <img src="static/images/magdiff_overview.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
+          <img src="static/images/overview.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
           </center>
           <div class="level-set has-text-justified">
-            <p>An overview of our proposed Multi-alignment Diffusion (MagDiff), a unified diffusion method supporting both video generation and editing at the same time. Our MagDiff is comprised of three key components: 1. Subject-Driven Alignment (SDA) for unifying two tasks, 2. Adaptive Prompts Alignment (APA) for distinguishing the different controllability between homogeneous and heterogeneous modalities, and 3. High-Fidelity Alignment (HFA) for improving the quality of video generation or editing.</p>
+            <p>An overview of our proposed DynamiCtrl for high-quality human image animation.</p>
           </div>
         </div>
       </div>
@@ -242,11 +156,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{zhao2024magdiff,
+    <pre><code>@article{zhao2025dynamictrl,
   title={DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation},
-  author={Zhao, Haoyu and Lu, Tianyi and Gu, Jiaxi and Zhang, Xing and Zheng, Qingping and Wu, Zuxuan and Xu, Hang and Jiang Yu-Gang},
-  journal={ECCV},
-  year={2024}
+  author={Haoyu, Zhao and Zhongang, Qi and Cong, Wang and Qingping, Zheng and Guansong, Lu and Fei, Chen and Hang, Xu and Zuxuan, Wu},
+  journal=Arxiv},
+  year={2025}
 }</code></pre>
   </div>
 </section>
