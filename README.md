@@ -59,8 +59,9 @@
 - [x] Paper on Arxiv
 </details>
 
-- [ ] Release code
+- [ ] Release inference code
 - [ ] Release model
+- [ ] Release training code
 
 ## 📋 Changelog
 Code coming soon!
