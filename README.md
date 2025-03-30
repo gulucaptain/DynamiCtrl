@@ -2,11 +2,17 @@
 
 [Haoyu Zhao](https://scholar.google.com/citations?user=pCGM7jwAAAAJ&hl=zh-CN&oi=ao/), [Zhongang Qi](https://scholar.google.com/citations?user=zJvrrusAAAAJ&hl=en/), [Cong Wang](#), [Qingqing Zheng](https://scholar.google.com.hk/citations?user=l0Y7emkAAAAJ&hl=zh-CN&oi=ao/), [Guansong Lu](https://scholar.google.com.hk/citations?user=YIt8thUAAAAJ&hl=zh-CN&oi=ao), [Fei Chen](#), [Hang Xu](https://scholar.google.com.hk/citations?user=J_8TX6sAAAAJ&hl=zh-CN&oi=ao) and [Zuxuan Wu](https://scholar.google.com.hk/citations?user=7t12hVkAAAAJ&hl=zh-CN&oi=ao)
 
-<a href='#'><img src='https://img.shields.io/badge/ArXiv-DynamiCtrl-red'></a> 
-<a href='#'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](#)
+<a href='https://arxiv.org/abs/2503.21246'><img src='https://img.shields.io/badge/ArXiv-DynamiCtrl-red'></a> 
+<a href='https://gulucaptain.github.io/DynamiCtrl/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
+<a href='https://youtu.be/Mu_pNXM4PcE'><img src='https://img.shields.io/badge/YouTube-Intro-yellow'></a>
+<!-- [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](#) -->
 [![GitHub](https://img.shields.io/github/stars/gulucaptain/DynamiCtrl?style=social)](https://github.com/gulucaptain/DynamiCtrl)
 
+## YouTube Overview
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Mu_pNXM4PcE/0.jpg)](https://www.youtube.com/watch?v=Mu_pNXM4PcE)
+
+### Generation with Image, Pose and Prompts
 
 <table class="center">
 <tr>
@@ -58,6 +64,7 @@
 
 ## 📋 Changelog
 Code coming soon!
+- 2025.03.30 Project page and demos released!
 - 2025.03.10 Project Online!
 
 ## ⚔️ DynamiCtrl Human Motion Video Generation
@@ -172,9 +179,9 @@ Two steps to generate a digital human:
 ```
 @article{zhao2025dynamictrl,
       title={DynamiCtrl: Rethinking the Basic Structure and the Role of Text for High-quality Human Image Animation}, 
-      author={Haoyu Zhao and Zhongang Qi and Cong Wang and Qingping Zheng and Guansong Lu and Fei Chen and Hang Xu and Zuxuan Wu},
+      author={Haoyu, Zhao and Zhongang, Qi and Cong, Wang and Qingping, Zheng and Guansong, Lu and Fei, Chen and Hang, Xu and Zuxuan, Wu},
       year={2025},
-      journal={arXiv:xxxx.xxxxx},
+      journal={arXiv:2503.21246},
 }
 ``` 
 
