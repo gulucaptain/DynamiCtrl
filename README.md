@@ -44,7 +44,7 @@ Please click to watch.
 
 
 ## 🎏 Abstract
-<b>TL; DR: <font color="red">DynamiCtrl</font> is the first framework to introduce text to the human image animation task and achieve pose control within the diffusion transformer (DiT) architecture.</b>
+<b>TL; DR: <font color="red">DynamiCtrl</font> is the first framework to propose the "Joint-text" paradigm to the pose-guided human animation task and achieve effective pose control within the diffusion transformer (DiT) architecture.</b>
 
 <details><summary>CLICK for the full abstract</summary>
 
@@ -56,24 +56,24 @@ Please click to watch.
 
 <details><summary>Click for Previous todos </summary>
 
-- [x] Release the project page and demos
-- [x] Paper on Arxiv
+- [&#10004;] Release the project page and demos.
+- [&#10004;] Paper on Arxiv on 27 Mar 2025.
 </details>
 
-- [ ] Release inference code
-- [ ] Release model
-- [ ] Release training code
+- [&#10004;] Release inference code.
+- [&#10004;] Release models.
+- [&#10004;] Release training code.
 
 ## 📋 Changelog
-Code coming soon!
+- 2025.05.20 Code and models released!
 - 2025.03.30 Project page and demos released!
 - 2025.03.10 Project Online!
 
 ## ⚔️ DynamiCtrl Human Motion Video Generation
 
-### Background Control (contains long video performance)
+### Text-guided Fine-grained Control (contains long video performance)
 
-We first refocus on the role of text for this task and find that fine-grained textual information helps improve video quality. In particular, we can achieve <font color="green">background controllability</font> using different prompts.
+We first refocus on the role of text for this task and find that fine-grained textual information helps improve video quality. In particular, we can achieve <font color="green">fine-grained local controllability</font> using different prompts.
 
 <table class="center">
 <tr>
@@ -176,7 +176,136 @@ Two steps to generate a digital human:
 2. Use the output video and an audio file, and apply MuseTalk to generate the correct lip movements.
 
 
+## Installation
+
+For usage (SFT fine-tuning, inference), you can install the dependencies with:
+
+```bash
+conda create --name dynamictrl python=3.10
+
+source activate dynamictrl
+
+pip install -r requirements.txt
+```
+
+
+## Model Zoo
+
+We provide three grou of checkpoints:
+<ol>
+<li>DynamiCtrl-5B: trained with whole person image w/o mask and corresponding driving pose sequence.</li>
+<li>Dynamictrl-5B-Mask_B01: trained with <strong>masked background</strong> in person image and pose sequence.</li>
+<li>Dynamictrl-5B-Mask_C01: trained with <strong>masked clothes</strong> in person image and pose sequence.</li>
+</ol>
+
+| name | Details | HF weights 🤗 |
+|:---|:---:|:---:|
+| DynamiCtrl-5B | SFT w/ whole image | [dynamictrl-5B](https://huggingface.co/gulucaptain/DynamiCtrl) |
+| Dynamictrl-5B-Mask_B01 | SFT w/ masked <font color=CornflowerBlue>B</font>ackground | [dynamictrl-5B-mask-B01](https://huggingface.co/gulucaptain/Dynamictrl-Mask_B01) |
+| Dynamictrl-5B-Mask_C01 | SFT w/ masked human <font color=CornflowerBlue>C</font>lothing | [dynamictrl-5B-mask-C01](#) |
+
+(Coming soon...) We are actively open-sourcing the Dynamictrl-5B-Mask_B01 and Dynamictrl-5B-Mask_C01 models.
+
+[Causal VAE](https://arxiv.org/abs/2408.06072), [T5](https://arxiv.org/abs/1910.10683) is used as our latent features and text encoder, you can directly download from [Here](https://huggingface.co/THUDM/CogVideoX1.5-5B-I2V) and put it under *./checkpoints/*:
+
+```bash
+cd checkpoints
+
+git lfs install
+
+git clone https://huggingface.co/gulucaptain/DynamiCtrl
+
+git clone https://huggingface.co/THUDM/CogVideoX1.5-5B-I2V
+
+# Replace the "transformer" folder in CogVideoX with the "transformer" folder in DynamiCtrl
+cd CogVideoX1.5-5B-I2V
+rm -rf transformer
+cp ../DynamiCtrl/transformer ./
+
+mv CogVideoX1.5-5B-I2V DynamiCtrl # Rename
+```
+
+Download the checkponts of [DWPose](https://github.com/IDEA-Research/DWPose) for human pose estimation:
+
+```bash
+cd checkpoints
+
+git clone https://huggingface.co/yzd-v/DWPose
+
+# Change the paths in ./dwpose/wholebody.py Lines 15 and 16.
+```
+
+## Quick Start
+
+### Direct Inference w/ Driving Video
+
+```bash
+image="/home/user/code/DynamiCtrl/assets/human1.jpg"
+video="/home/user/code/DynamiCtrl/assets/video1.mp4"
+
+model_path="./checkpoints/DynamiCtrl"
+output="./outputs"
+
+CUDA_VISIBLE_DEVICES=0 python scripts/dynamictrl_inference.py \
+    --prompt="Input the test prompt here." \
+    --reference_image_path=$image \
+    --ori_driving_video=$video \
+    --model_path=$model_path \
+    --generate_type="i2v" \
+    --output_path=$output \
+    --num_inference_steps=25 \
+    --width=768 \
+    --height=1360 \
+    --num_frames=37 \
+    --pose_control_function="padaln" \
+    --guidance_scale=3.0 \
+    --seed=42 \
+```
+
+<font color=Coral>Tips:</font> When using the trained DynamiCtrl model without a masked area, you should ensure that the prompt content aligns with the provided human image, including the person's appearance and the background description.
+
+You can write the prompt by youself or we also provide a guidance to use Qwen2-VL tool to help you write the prompt corresponding to the content of image automatically, you can follow this blog [How to use Qwen2-VL](https://blog.csdn.net/zxs0222/article/details/144698753?spm=1001.2014.3001.5501).
+
+### Inference w/ Maksed Human Image
+
+Thanks to the proposed "Joint-text" paradigm for this task, we can achieve fine-grained control over human motion, including background and clothing areas. It is also easy to use, just provide a human image with blacked-out areas, and you can directly run the inference script for generation. Note to replace the model path. How to automatically get the mask area? You can follow this instruction: [How to use get mask](https://blog.csdn.net/zxs0222/article/details/147604020?spm=1001.2014.3001.5501).
+
+```bash
+image="/home/user/code/DynamiCtrl/assets/maksed_human1.jpg"
+video="/home/user/code/DynamiCtrl/assets/video1.mp4"
+
+model_path="./checkpoints/Dynamictrl-5B-Mask_B01" # or "./checkpoints/Dynamictrl-5B-Mask_C01"
+output="./outputs"
+
+CUDA_VISIBLE_DEVICES=0 python scripts/dynamictrl_inference.py \
+    --prompt="Input the test prompt here." \
+    --reference_image_path=$image \
+    --ori_driving_video=$video \
+    --model_path=$model_path \
+    --generate_type="i2v" \
+    --output_path=$output \
+    --num_inference_steps=25 \
+    --width=768 \
+    --height=1360 \
+    --num_frames=37 \
+    --pose_control_function="padaln" \
+    --guidance_scale=3.0 \
+    --seed=42 \
+```
+
+<font color=Coral>Tips:</font> Although the "Dynamictrl-5B-Mask_B01" and "Dynamictrl-5B-Mask_C01" models are trained with masked human images, you can still directly test whole human images with these two models. Sometimes, they may even perform better than the basic "Dynamictrl-5B" model.
+
+### Training
+
+Please find the instructions on data preparation and training [here](./docs/finetune.md).
+
+
+
+
+
 ## 📍 Citation 
+
+If you find this repository helpful, please consider citing:
 
 ```
 @article{zhao2025dynamictrl,
@@ -186,7 +315,6 @@ Two steps to generate a digital human:
       journal={arXiv:2503.21246},
 }
 ``` 
-
 
 ## 💗 Acknowledgements
 
