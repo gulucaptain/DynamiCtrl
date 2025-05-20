@@ -8,49 +8,158 @@
 [![GitHub](https://img.shields.io/github/stars/gulucaptain/DynamiCtrl?style=social)](https://github.com/gulucaptain/DynamiCtrl)
 <!-- [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](#) -->
 
-## YouTube Overview
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Mu_pNXM4PcE/0.jpg)](https://www.youtube.com/watch?v=Mu_pNXM4PcE)
-Please click to watch.
-
-### Generation with Image, Pose and Prompts
-
-<table class="center">
-<tr>
-  <td>
-    <video src="https://github.com/user-attachments/assets/ef21d87c-34b8-4cad-86b7-f23fc57e8ddb" width="768px" height="100%" controls autoplay loop></video>
-  </td>
-  <td>
-    <video src="https://github.com/user-attachments/assets/54748782-cf2d-415c-824c-f2aa97754ab6" width="768px" height="100%" controls autoplay loop></video>
-  </td>
-</tr>
-<tr>
-<td><p style="font-size:10px; text-align:justify;">Prompt: “The person in the image is wearing a traditional outfit with intricate embroidery and embellishments. The outfit features a blue and gold color scheme with detailed floral patterns. The background is dark and blurred, which helps to highlight the person and their attire. The lighting is soft and warm, creating a serene and elegant atmosphere.”</p></td>
-<td><p style="font-size:10px; text-align:justify;">Prompt: “The person in the image is a woman with long, blonde hair styled in loose waves. She is wearing a form-fitting, sleeveless top with a high neckline and a small cutout at the chest. The top is beige and has a strap across her chest. She is also wearing a black belt with a pouch attached to it. Around her neck, she has a turquoise pendant necklace. The background appears to be a dimly lit, urban environment with a warm, golden glow."</p></td>
-</tr>
-<tr>
-  <td>
-    <video src="https://github.com/user-attachments/assets/10d955dc-f00a-45c0-8632-2b2a93086281" width="768px" height="100%" controls autoplay loop></video>
-  </td>
-  <td>
-    <video src="https://github.com/user-attachments/assets/22ab1e13-222e-4f87-bf9e-2fca53fcb76d" width="768px" height="100%" controls autoplay loop></video>
-  </td>
-</tr>
-<tr>
-<td><p style="font-size:10px; text-align:justify;">Prompt: “The person in the image is wearing a black, form-fitting one-piece outfit and a pair of VR goggles. They are walking down a busy street with numerous people and colorful neon signs in the background. The street appears to be a bustling urban area, possibly in a city known for its vibrant nightlife and entertainment. The lighting and signage suggest a lively atmosphere, typical of a cityscape at night."</p></td>
-<td><p style="font-size:10px; text-align:justify;">Prompt: “The image depicts a stylized, animated character standing amidst a chaotic and dynamic background. The character is dressed in a blue suit with a red cape, featuring a prominent "S" emblem on the chest. The suit has a belt with pouches and a utility belt. The character has spiky hair and is standing on a pile of debris and rubble, suggesting a scene of destruction or battle. The background is filled with glowing, fiery elements and a sense of motion, adding to the dramatic and intense atmosphere of the scene."</p></td>
-</tr>
-</table>
-
-
-## 🎏 Abstract
+## 🎏 Introduction
 <b>TL; DR: <font color="red">DynamiCtrl</font> is the first framework to propose the "Joint-text" paradigm to the pose-guided human animation task and achieve effective pose control within the diffusion transformer (DiT) architecture.</b>
 
-<details><summary>CLICK for the full abstract</summary>
+<details><summary>CLICK for the full introduction</summary>
 
 
 > With diffusion transformer (DiT) excelling in video generation, its use in specific tasks has drawn increasing attention. However, adapting DiT for pose-guided human image animation faces two core challenges: (a) existing U-Net-based pose control methods may be suboptimal for the DiT backbone; and (b) removing text guidance, as in previous approaches, often leads to semantic loss and model degradation. To address these issues, we propose DynamiCtrl, a novel framework for human animation in video DiT architecture. Specifically, we use a shared VAE encoder for human images and driving poses, unifying them into a common latent space, maintaining pose fidelity, and eliminating the need for an expert pose encoder during video denoising. To integrate pose control into the DiT backbone effectively, we propose a novel Pose-adaptive Layer Norm model. It injects normalized pose features into the denoising process via conditioning on visual tokens, enabling seamless and scalable pose control across DiT blocks. Furthermore, to overcome the shortcomings of text removal, we introduce the "Joint-text" paradigm, which preserves the role of text embeddings to provide global semantic context. Through full-attention blocks, image and pose features are aligned with text features, enhancing semantic consistency, leveraging pretrained knowledge, and enabling multi-level control. Experiments verify the superiority of DynamiCtrl on benchmark and self-collected data (e.g., achieving the best LPIPS of 0.166), demonstrating strong character control and high-quality synthesis.
 </details>
+
+## 📺 Overview on YouTube
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Mu_pNXM4PcE/0.jpg)](https://www.youtube.com/watch?v=Mu_pNXM4PcE)
+Please click to watch.
+
+## ⚔️ DynamiCtrl for High-quality Pose-guided Human Image Animation
+
+We first refocus on the role of text for this task and find that fine-grained textual information helps improve video quality. In particular, we can achieve <font color="green">fine-grained local controllability</font> using different prompts.
+
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/58aed8d1-9dce-416c-9cf4-57af9dbf2d19" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/ec40ac72-6b46-487b-b78a-a28b123e1041" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/1d7d323b-dd12-4023-a709-1774801725cd" width="100%" controls autoplay loop></video>
+      </td>
+  </tr>
+</table>
+
+<details><summary>CLICK to check the prompts used for generation in the above three cases.</summary>
+
+> Prompt (left): “The image depicts a stylized, animated character standing amidst a chaotic and dynamic background. The character is dressed in a blue suit with a red cape, featuring a prominent "S" emblem on the chest. The suit has a belt with pouches and a utility belt. The character has spiky hair and is standing on a pile of debris and rubble, suggesting a scene of destruction or battle. The background is filled with glowing, fiery elements and a sense of motion, adding to the dramatic and intense atmosphere of the scene."
+
+> Prompt (mid): “The person in the image is a woman with long, blonde hair styled in loose waves. She is wearing a form-fitting, sleeveless top with a high neckline and a small cutout at the chest. The top is beige and has a strap across her chest. She is also wearing a black belt with a pouch attached to it. Around her neck, she has a turquoise pendant necklace. The background appears to be a dimly lit, urban environment with a warm, golden glow."
+
+> Prompt (right): “The person in the image is wearing a black, form-fitting one-piece outfit and a pair of VR goggles. They are walking down a busy street with numerous people and colorful neon signs in the background. The street appears to be a bustling urban area, possibly in a city known for its vibrant nightlife and entertainment. The lighting and signage suggest a lively atmosphere, typical of a cityscape at night."
+</details>
+
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/c37ed889-5212-4180-9f63-f6c7064bccef" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/05d24850-52d3-45b8-98f3-d2ec37846cb7" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/6cd60d42-6c9d-4049-95b3-2b226786315f" width="100%" controls autoplay loop></video>
+      </td>
+  </tr>
+</table>
+
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/549614b4-200e-4561-a88c-e89e1a61ff01" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/38f3ce0c-1602-4ace-b6a1-16834ac44597" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/0dbc1303-9d22-43de-a4f9-7d9c87189898" width="100%" controls autoplay loop></video>
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/ce9cc50c-0366-4f96-ba0e-c49e282ac599" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/44e9990e-edae-4857-b557-14e04ce91e75" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/dd6afcc1-65c5-4dcc-80af-587546f601cc" width="100%" controls autoplay loop></video>
+      </td>
+  </tr>
+</table>
+
+### Fine-grained video control
+
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/0df11a8b-8c08-4ca3-bed6-eb27f260a9af" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/8e0d16f6-1842-429e-9e9f-ffac93d12cbc" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/358b3eb2-bcda-4581-baf1-ba6fc89cb935" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/43cd395d-f4c5-42fb-9d82-d213e04b52de" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/6828c6a8-a51f-45a6-8dfb-f4b0eaba8742" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/a8d89138-2a69-4c51-bdf6-1341014d5542" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/22d5ebc1-18da-4d27-a2e3-348e44173502" width="100%" controls autoplay loop></video>
+      </td>
+  </tr>
+</table>
+
+<details><summary>CLICK to check the prompts used for generation in the above background-control cases.</summary>
+
+> Scene 1: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a bustling futuristic city at night, with neon lights reflecting off the wet streets and flying cars zooming above.
+
+> Scene 2: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a vibrant market street in a Middle Eastern bazaar, filled with colorful fabrics, exotic spices, and merchants calling out to customers.
+
+> Scene 3: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a sunny beach with golden sand, gentle ocean waves rolling onto the shore, and palm trees swaying in the breeze.
+
+> Scene 4: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a high-tech research lab with sleek metallic walls, glowing holographic screens, and robotic arms assembling futuristic devices.
+
+> Scene 5: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a mystical ancient temple hidden deep in the jungle, covered in vines, with glowing runes carved into the stone walls.
+
+> Scene 6: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a serene snowy forest with tall pine trees, soft snowflakes falling gently, and a frozen river winding through the landscape.
+
+> Scene 7: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows an abandoned industrial warehouse with broken windows, scattered debris, and rusted machinery covered in dust.
+</details>
+
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/e82cc65c-5bc9-4fac-ac99-7e52dce4a3eb" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/20733412-702b-4c71-810c-b5c79054e1a0" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/bb25c56d-c009-49ba-905b-dc78f129eb73" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/3cd01d92-de46-4df1-b55b-7da0c2552db8" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/978e46a1-3fdc-4aeb-84cb-0ad42fa2ec01" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/68754207-d4e6-4280-90ac-28caa634537d" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/737976dd-0bc5-4e2d-97a6-e00533e6f0ce" width="100%" controls autoplay loop></video>
+      </td>
+  </tr>
+</table>
+
+
 
 ## 🚧 Todo
 
@@ -68,88 +177,6 @@ Please click to watch.
 - 2025.05.20 Code and models released!
 - 2025.03.30 Project page and demos released!
 - 2025.03.10 Project Online!
-
-## ⚔️ DynamiCtrl Human Motion Video Generation
-
-### Text-guided Fine-grained Control (contains long video performance)
-
-We first refocus on the role of text for this task and find that fine-grained textual information helps improve video quality. In particular, we can achieve <font color="green">fine-grained local controllability</font> using different prompts.
-
-<table class="center">
-<tr>
-  <td>
-    <img src="https://github.com/user-attachments/assets/0e603117-35af-4543-9b5b-fa86b4b44ca9" width="192px" height="100%">
-  </td>
-  <td>
-    <video src="https://github.com/user-attachments/assets/d43a890f-62b8-4d0a-9110-da2c80067c88" width="192px" height="100%" controls autoplay loop></video>
-  </td>
-  <td>
-    <img width="192px" height="100%" src="https://github.com/user-attachments/assets/1bb7bbfd-fb2d-4c16-913f-ed8204a40858">
-  </td>
-  <td>
-    <video src="https://github.com/user-attachments/assets/6c586a42-51bd-4641-84f8-bb02e6883ec3" width="768px" height="100%" controls autoplay loop></video>
-  </td>
-</tr>
-<tr>
-  <td width=25% style="text-align:center;">Case (a)</td>
-  <td width=25% style="text-align:center;">"->Green trees"</td>
-  <td width=25% style="text-align:center;">Case (b)</td>
-  <td width=25% style="text-align:center;">"->Beautiful ocean"</td>
-</tr>
-<tr>
-  <td></td>
-  <td><img src="https://github.com/user-attachments/assets/437e59f0-5f93-478e-a616-0d6d19664daa"  width="192px" height="100%"></td>
-  <td>
-    <video src="https://github.com/user-attachments/assets/356916f1-ff7f-466c-85b3-884fbc562893" width="768px" height="100%" controls autoplay loop></video>
-  </td>
-  <td></td>
-</tr>
-<tr>
-  <td width=25% style="text-align:center;"></td>
-  <td width=25% style="text-align:center;">Case (c)</td>
-  <td width=25% style="text-align:center;">"Across seven different backgrounds <font color="red"> (Long video over 200 frames)</font>"</td>
-  <td width=25% style="text-align:center;"></td>
-</tr>
-</table>
-
-<details><summary>CLICK for the full prompts used in Case (c).</summary>
-
-
-> Scene 1: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a bustling futuristic city at night, with neon lights reflecting off the wet streets and flying cars zooming above.
-
-> Scene 2: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a vibrant market street in a Middle Eastern bazaar, filled with colorful fabrics, exotic spices, and merchants calling out to customers.
-
-> Scene 3: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a mystical ancient temple hidden deep in the jungle, covered in vines, with glowing runes carved into the stone walls.
-
-> Scene 4: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a sunny beach with golden sand, gentle ocean waves rolling onto the shore, and palm trees swaying in the breeze.
-
-> Scene 5: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows an abandoned industrial warehouse with broken windows, scattered debris, and rusted machinery covered in dust.
-
-> Scene 6: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a high-tech research lab with sleek metallic walls, glowing holographic screens, and robotic arms assembling futuristic devices.
-
-> Scene 7: The person in the image is wearing a white, knee-length dress with short sleeves and a square neckline. The dress features lace detailing and a ruffled hem. The person is also wearing clear, open-toed sandals. The background shows a serene snowy forest with tall pine trees, soft snowflakes falling gently, and a frozen river winding through the landscape.
-</details>
-
-### Cross-identity Retargetting
-
-<table class="center">
-<tr>
-  <td>
-    <video src="https://github.com/user-attachments/assets/4bc68bb0-1e5e-451f-ba74-706869267e51" width="800px" height="100%" controls autoplay loop></video>
-  </td>
-  <td>
-    <video src="https://github.com/user-attachments/assets/e524ba8f-d5a4-4713-9de6-f21c12521e39" width="800px" height="100%" controls autoplay loop></video>
-  </td>
-</tr>
-<tr>
-  <td>
-    <video src="https://github.com/user-attachments/assets/2683efab-4da4-458c-a61c-d3112f6f5624" width="800px" height="100%" controls autoplay loop></video>
-  </td>
-  <td>
-    <video src="https://github.com/user-attachments/assets/67889c3b-998d-460a-87b4-762a107629f5" width="800px" height="100%" controls autoplay loop></video>
-  </td>
-</tr>
-</table>
 
 
 ## Installation
@@ -211,7 +238,7 @@ git clone https://huggingface.co/yzd-v/DWPose
 # Change the paths in ./dwpose/wholebody.py Lines 15 and 16.
 ```
 
-## Quick Start
+## 👍 Quick Start
 
 ### Direct Inference w/ Driving Video
 
@@ -275,7 +302,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/dynamictrl_inference.py \
 
 Please find the instructions on data preparation and training [here](./docs/finetune.md).
 
-## More Applications:
+## 🔅 More Applications:
 
 ### Digital Human (contains long video performance)
 
@@ -284,21 +311,21 @@ Show cases: long video with 12 seconds, driving by the same audio.
 <table class="center">
 <tr>
   <td>
-    <video src="https://github.com/user-attachments/assets/4475fc8d-1736-4ee1-a0a5-e16b475b5eb3" width="512px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/9a288ed5-2eb9-4035-9b1d-1a7bda81a81e" width="300px" height="100%" controls autoplay loop></video>
   </td>
   <td>
-    <video src="https://github.com/user-attachments/assets/9104ffd5-3480-4ab1-9ed2-b78661132147" width="512px" height="100%" controls autoplay loop></video>
+    <video src="https://github.com/user-attachments/assets/797c622e-8ee0-4038-912d-e5d0c9b2ea43" width="300px" height="100%" controls autoplay loop></video>
   </td>
 </tr>
 </table>
 
-The identities of the digital human are generated by vivo's BlueLM model (image generation).
+The identities of the digital human are generated by vivo's BlueLM model (Text to image generation).
 
 Two steps to generate a digital human:
 
 1. Prepare a human image and a guided pose video, and generate the video materials using our DynamiCtrl.
 
-2. Use the output video and an audio file, and apply MuseTalk to generate the correct lip movements.
+2. Use the output video and an audio file, and apply MuseTalk [MuseTalk](https://github.com/TMElyralab/MuseTalk) to generate the correct lip movements.
 
 
 
