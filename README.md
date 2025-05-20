@@ -244,7 +244,7 @@ You can write the prompt by youself or we also provide a guidance to use Qwen2-V
 
 ### Inference w/ Maksed Human Image
 
-Thanks to the proposed "Joint-text" paradigm for this task, we can achieve fine-grained control over human motion, including background and clothing areas. It is also easy to use, just provide a human image with blacked-out areas, and you can directly run the inference script for generation. Note to replace the model path. How to automatically get the mask area? You can follow this instruction: [How to use get mask](https://blog.csdn.net/zxs0222/article/details/147604020?spm=1001.2014.3001.5501).
+Thanks to the proposed "Joint-text" paradigm for this task, we can achieve fine-grained control over human motion, including background and clothing areas. It is also easy to use, just provide a human image with blacked-out areas, and you can directly run the inference script for generation. Note to replace the model path. How to automatically get the mask area? You can follow this instruction: [How to get mask of subject](https://blog.csdn.net/zxs0222/article/details/147604020?spm=1001.2014.3001.5501).
 
 ```bash
 image="/home/user/code/DynamiCtrl/assets/maksed_human1.jpg"
@@ -279,7 +279,7 @@ Please find the instructions on data preparation and training [here](./docs/fine
 
 ### Digital Human (contains long video performance)
 
-Show cases (c): long video with 12 seconds, driving by the same audio.
+Show cases: long video with 12 seconds, driving by the same audio.
 
 <table class="center">
 <tr>
