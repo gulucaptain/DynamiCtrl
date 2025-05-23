@@ -213,6 +213,8 @@ We provide three grou of checkpoints:
 ```bash
 cd checkpoints
 
+pip install -U huggingface_hub
+
 huggingface-cli download --resume-download --local-dir-use-symlinks False gulucaptain/DynamiCtrl --local-dir ./DynamiCtrl
 
 huggingface-cli download --resume-download --local-dir-use-symlinks False gulucaptain/Dynamictrl-Mask_B01 --local-dir ./Dynamictrl-Mask_B01
@@ -289,6 +291,15 @@ CUDA_VISIBLE_DEVICES=0 python scripts/dynamictrl_inference.py \
 ```
 
 <font color=Coral>Tips:</font> Although the "Dynamictrl-5B-Mask_B01" and "Dynamictrl-5B-Mask_C01" models are trained with masked human images, you can still directly test whole human images with these two models. Sometimes, they may even perform better than the basic "Dynamictrl-5B" model.
+
+#### Memory and time cost
+
+| Device | Num of frames | Reslolutions | Time | GPU-mem
+|:---|:---:|:---:|:---:|:---:|
+| H20 | 37 | 1360 * 768 | 3 min 50s | 28.4 GB |
+| H20 | 37 | 1024 * 576 | 1 min 40s | 24.7 GB |
+| H20 | 37 | 1360 * 1360 | 9 min 28s | 34.8 GB |
+| H20 | 37 | 1024 * 1024 | 3 min 50s |  28.4 GB |
 
 ### Training
 
