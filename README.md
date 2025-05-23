@@ -205,27 +205,19 @@ We provide three grou of checkpoints:
 |:---|:---:|:---:|
 | DynamiCtrl-5B | SFT w/ whole image | [dynamictrl-5B](https://huggingface.co/gulucaptain/DynamiCtrl) |
 | Dynamictrl-5B-Mask_B01 | SFT w/ masked <font color=CornflowerBlue>B</font>ackground | [dynamictrl-5B-mask-B01](https://huggingface.co/gulucaptain/Dynamictrl-Mask_B01) |
-| Dynamictrl-5B-Mask_C01 | SFT w/ masked human <font color=CornflowerBlue>C</font>lothing | [dynamictrl-5B-mask-C01](#) |
+| Dynamictrl-5B-Mask_C01 | SFT w/ masked human <font color=CornflowerBlue>C</font>lothing | [dynamictrl-5B-mask-C01](https://huggingface.co/gulucaptain/Dynamictrl-Mask_C01) |
 
-(Coming soon...) We are actively open-sourcing the Dynamictrl-5B-Mask_B01 and Dynamictrl-5B-Mask_C01 models.
 
-[Causal VAE](https://arxiv.org/abs/2408.06072), [T5](https://arxiv.org/abs/1910.10683) is used as our latent features and text encoder, you can directly download from [Here](https://huggingface.co/THUDM/CogVideoX1.5-5B-I2V) and put it under *./checkpoints/*:
+[Causal VAE](https://arxiv.org/abs/2408.06072), [T5](https://arxiv.org/abs/1910.10683) are used as our VAE model and text encoder.
 
 ```bash
 cd checkpoints
 
-git lfs install
+huggingface-cli download --resume-download --local-dir-use-symlinks False gulucaptain/DynamiCtrl --local-dir ./DynamiCtrl
 
-git clone https://huggingface.co/gulucaptain/DynamiCtrl
+huggingface-cli download --resume-download --local-dir-use-symlinks False gulucaptain/Dynamictrl-Mask_B01 --local-dir ./Dynamictrl-Mask_B01
 
-git clone https://huggingface.co/THUDM/CogVideoX1.5-5B-I2V
-
-# Replace the "transformer" folder in CogVideoX with the "transformer" folder in DynamiCtrl
-cd CogVideoX1.5-5B-I2V
-rm -rf transformer
-cp ../DynamiCtrl/transformer ./
-
-mv CogVideoX1.5-5B-I2V DynamiCtrl # Rename
+huggingface-cli download --resume-download --local-dir-use-symlinks False gulucaptain/Dynamictrl-Mask_C01 --local-dir ./Dynamictrl-Mask_C01
 ```
 
 Download the checkponts of [DWPose](https://github.com/IDEA-Research/DWPose) for human pose estimation:
@@ -254,7 +246,6 @@ CUDA_VISIBLE_DEVICES=0 python scripts/dynamictrl_inference.py \
     --reference_image_path=$image \
     --ori_driving_video=$video \
     --model_path=$model_path \
-    --generate_type="i2v" \
     --output_path=$output \
     --num_inference_steps=25 \
     --width=768 \
@@ -271,7 +262,7 @@ You can write the prompt by youself or we also provide a guidance to use Qwen2-V
 
 ### Inference w/ Maksed Human Image
 
-Thanks to the proposed "Joint-text" paradigm for this task, we can achieve fine-grained control over human motion, including background and clothing areas. It is also easy to use, just provide a human image with blacked-out areas, and you can directly run the inference script for generation. Note to replace the model path. How to automatically get the mask area? You can follow this instruction: [How to get mask of subject](https://blog.csdn.net/zxs0222/article/details/147604020?spm=1001.2014.3001.5501).
+Thanks to the proposed "Joint-text" paradigm for this task, we can achieve fine-grained control over human motion, including background and clothing areas. It is also easy to use, just provide a human image with blacked-out areas, and you can directly run the inference script for generation. Note to replace the model path. How to automatically get the mask area? You can follow this blog: [How to get mask of subject](https://blog.csdn.net/zxs0222/article/details/147604020?spm=1001.2014.3001.5501).
 
 ```bash
 image="/home/user/code/DynamiCtrl/assets/maksed_human1.jpg"
@@ -285,7 +276,6 @@ CUDA_VISIBLE_DEVICES=0 python scripts/dynamictrl_inference.py \
     --reference_image_path=$image \
     --ori_driving_video=$video \
     --model_path=$model_path \
-    --generate_type="i2v" \
     --output_path=$output \
     --num_inference_steps=25 \
     --width=768 \
@@ -325,7 +315,7 @@ Two steps to generate a digital human:
 
 1. Prepare a human image and a guided pose video, and generate the video materials using our DynamiCtrl.
 
-2. Use the output video and an audio file, and apply MuseTalk [MuseTalk](https://github.com/TMElyralab/MuseTalk) to generate the correct lip movements.
+2. Use the output video and an audio file, and apply [MuseTalk](https://github.com/TMElyralab/MuseTalk) to generate the correct lip movements.
 
 
 
