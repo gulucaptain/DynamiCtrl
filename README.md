@@ -237,8 +237,8 @@ git clone https://huggingface.co/yzd-v/DWPose
 ### Direct Inference w/ Driving Video
 
 ```bash
-image="/home/user/code/DynamiCtrl/assets/human1.jpg"
-video="/home/user/code/DynamiCtrl/assets/video1.mp4"
+image="./assets/human1.jpg"
+video="./assets/motion1.mp4"
 
 model_path="./checkpoints/DynamiCtrl"
 output="./outputs"
@@ -269,10 +269,10 @@ Thanks to the proposed "Joint-text" paradigm for this task, we can achieve fine-
 Note: please replace the "transformer" folder in DynamiCtrl with the "Dynamictrl-Mask_B01" or "Dynamictrl-Mask_C01" folder.
 
 ```bash
-image="/home/user/code/DynamiCtrl/assets/maksed_human1.jpg"
-video="/home/user/code/DynamiCtrl/assets/video1.mp4"
+image="./assets/maksed_human1.jpg" # Required
+video="./assets/motion.mp4"
 
-model_path="./checkpoints/Dynamictrl-5B-Mask_B01" # or "./checkpoints/Dynamictrl-5B-Mask_C01"
+model_path="./checkpoints/Dynamictrl" # or "Dynamictrl-5B-Mask_C01"
 output="./outputs"
 
 CUDA_VISIBLE_DEVICES=0 python scripts/dynamictrl_inference.py \
