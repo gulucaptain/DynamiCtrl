@@ -264,6 +264,8 @@ You can write the prompt by youself or we also provide a guidance to use Qwen2-V
 
 Thanks to the proposed "Joint-text" paradigm for this task, we can achieve fine-grained control over human motion, including background and clothing areas. It is also easy to use, just provide a human image with blacked-out areas, and you can directly run the inference script for generation. Note to replace the model path. How to automatically get the mask area? You can follow this blog: [How to get mask of subject](https://blog.csdn.net/zxs0222/article/details/147604020?spm=1001.2014.3001.5501).
 
+Note: please replace the "transformer" folder in DynamiCtrl with the "Dynamictrl-Mask_B01" or "Dynamictrl-Mask_C01" folder.
+
 ```bash
 image="/home/user/code/DynamiCtrl/assets/maksed_human1.jpg"
 video="/home/user/code/DynamiCtrl/assets/video1.mp4"
